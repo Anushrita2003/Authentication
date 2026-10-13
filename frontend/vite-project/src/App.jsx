@@ -5,7 +5,7 @@ import Login from './pages/Login'
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Navigate to="/login" replace />} />
+      <Route path="/" element={<Navigate to="/signup" replace />} />
       <Route path="/login" element={<Login />} />
       <Route path="/signup" element={<SignUp />} />
     </Routes>

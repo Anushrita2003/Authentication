@@ -44,11 +44,15 @@ export const signUp=async (req,res)=>{
         }})
 
 
-    } catch (error) {
+    } 
+    catch (error) {
+        console.error("SIGNUP ERROR:", error);
+
         return res.status(500).json({
-            message:"internal server error"
-        })
+            message: error.message || "Internal server error"
+    });
     }
+
 }
 
 export const login = async(req,res)=>{
